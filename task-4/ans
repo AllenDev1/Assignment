@@ -1,0 +1,56 @@
+Q. Please explain the file structure in your project for TEST 1. What are the modules/components in your projects? How do they work with each other?
+
+Ans: file structure of task-1 :
+
+        CMS/
+        |-- Assignment/
+            |-- apis/
+                |-- database/
+                    |-- database.js
+                    |-- tables.sql
+                |--routes/
+                    |--other.Routes.js
+                    |--student.Routes.js
+                |-- .env
+                |-- index.js
+                |-- .gitignore
+                |-- package.json
+                |-- package-lock.json
+
+            |-- clients
+                |-- src/
+                    |-- components/
+                        |-- Login.jsx
+                        |-- Home.jsx
+                        |-- Navigation.jsx
+                        |-- DeleteModel.jsx
+                        |-- AssignmentModel.jsx
+
+                |-- App.jsx
+                |-- Main.jsx
+                |-- vite.config.js
+                and so on...
+
+            |-- docker-compose.yml
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+The database.js file in the database folder contains the code that sets up a connection to a MySQL database, reads an SQL script from a tables.sql, and executes the script to create tables and define the schema of the database. The connection object is exported so that other parts of the application can use it to interact with the database. 
+
+In the routes folder, I have created 2 different files one for the student and another for the rest of the routes that will be needed for this task. For the student route I have simply created CRUD function for the studennt and in the other routes I have creates roues for login, assignments, submission etc. The routes in the routes folder use the database connection exported by the database.js file to interact with the database. Each route file imports the connection object from the database.js file, and uses it to execute SQL queries and retrieve or modify data in the database.
+
+In the clients folder, there is a src folder that contains the React components used to build the user interface of the application. These components are organized into a components folder, which includes components such as Login.jsx, Home.jsx, and Navigation.jsx. These components are responsible for rendering different parts of the application, such as the login form, the home page, and the navigation menu. The App.jsx and Main.jsx files are also located in the src folder, and are responsible for setting up the overall structure of the application and defining the routes for different pages. The vite.config.js file is used to configure the Vite build tool, which is used to bundle and serve the application during development.
+
+In a typical development setup, the frontend and backend of an application run on different servers, which can cause issues with cross-origin resource sharing (CORS). To avoid these issues, I have set up a proxy in the vite.config.js file to forward requests from the frontend to the backend.
+
+The proxy works by intercepting requests made by the frontend to a specific path, in our case /api, and forwarding them to the backend server. This makes it appear as if the requests are being made to the same origin, avoiding any CORS issues.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Q. Please summarize in one paragraph what an API is, to a layman who is not familiar with technology.
+
+Ans: Layman, let’s assume you are in a restaurant (an app), where there is a kitchen (backend) and seating area (frontend). To order food, someone needs to take your order and go to the kitchen to bring back the food. What do we call this person? You guessed it right - a waiter (API). Just like a waiter takes orders from customers and brings food from the kitchen, an API acts as an intermediary between the frontend and backend of an application, allowing them to communicate and exchange information.
