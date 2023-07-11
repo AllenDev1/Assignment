@@ -115,29 +115,32 @@ const Home = () => {
 										)}
 									</td>
 									<td className="d-flex justify-content-between gap-2">
-										<Button
-											variant="outline-primary"
-											className="w-50"
-											onClick={() => {
-												setAssignmentsModel(true);
-												setAssignmentId(_.id);
-												setUserid(useID);
-												setSubmissionMade(false);
-											}}
-										>
-											Submit
-										</Button>
-										<Button
-											variant="outline-danger"
-											className="w-50 "
-											onClick={() => {
-												setDeleteModel(true);
-												setAssignmentId(_.id);
-												setUserid(useID);
-											}}
-										>
-											Delete
-										</Button>
+										{assignmentSubmissions[_.id] ? (
+											<Button
+												variant="outline-danger"
+												className="w-100 "
+												onClick={() => {
+													setDeleteModel(true);
+													setAssignmentId(_.id);
+													setUserid(useID);
+												}}
+											>
+												Delete
+											</Button>
+										) : (
+											<Button
+												variant="outline-primary"
+												className="w-100"
+												onClick={() => {
+													setAssignmentsModel(true);
+													setAssignmentId(_.id);
+													setUserid(useID);
+													setSubmissionMade(false);
+												}}
+											>
+												Submit
+											</Button>
+										)}
 									</td>
 								</tr>
 							);
