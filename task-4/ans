@@ -47,6 +47,8 @@ In a typical development setup, the frontend and backend of an application run o
 
 The proxy works by intercepting requests made by the frontend to a specific path, in our case /api, and forwarding them to the backend server. This makes it appear as if the requests are being made to the same origin, avoiding any CORS issues.
 
+The docker-compose.yml has defiend 2 services, MySQL server and a phpMyAdmin instance using Docker. The mysql service uses the mysql:8 image and is configured with the necessary command and environment variables to run a MySQL server. The phpMyAdmin service depends on the mysql service and uses the phpmyadmin:5.1.1-apache image to run a phpMyAdmin instance, which provides a web-based interface for managing the MySQL server. 
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
