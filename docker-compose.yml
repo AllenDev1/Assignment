@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mysql:
+    image:  mysql:8
+    command: --default-authentication-plugin=mysql_native_password --secure-file-priv=""
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+
+  phpMyAdmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin:5.1.1-apache
+    restart: on-failure
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - UPLOAD_LIMIT=350M
