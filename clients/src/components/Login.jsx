@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const [error, setError] = useState(false);
 	const navigate = useNavigate();
 
 	const login = async () => {
@@ -28,6 +29,7 @@ const Login = () => {
 				})
 				.catch(function (error) {
 					console.error(error);
+					setError(true);
 				});
 		} catch (error) {
 			console.log(error);
@@ -45,6 +47,11 @@ const Login = () => {
                     shadow-lg bg-body rounded
                     "
 				>
+					{error ? (
+						<div className="alert alert-danger" role="alert">
+							Invalid username or password
+						</div>
+					) : null}
 					<Form
 						onSubmit={(e) => {
 							e.preventDefault();
