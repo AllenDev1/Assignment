@@ -1,7 +1,7 @@
 # Assignment
 
 step 1: run the docker container
-step 2: run the command "docker-compose up"
+step 2: run the command "docker-compose up" in Assignmanet dir
 
 
 
