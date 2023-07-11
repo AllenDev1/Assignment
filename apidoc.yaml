@@ -1,0 +1,292 @@
+_type: export
+__export_format: 4
+__export_date: 2023-07-11T19:51:27.003Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_70a7f6cfc270455487253da89d7be881
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689083750085
+    created: 1689083644234
+    url: http://localhost:8000/api/students/
+    name: student
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1689083644234
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    parentId: null
+    modified: 1689083640290
+    created: 1689083640290
+    name: CMS
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_785a456c821740a4ab77b8c1acb10cf6
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689084207472
+    created: 1689084166550
+    url: http://localhost:8000/api/students/
+    name: student
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "allen",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1686671736144.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_da39e00d33a94aff98d7c6fa7997a43d
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689084580074
+    created: 1689084530812
+    url: http://localhost:8000/api/login/
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "allen",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685465782099.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fd44f9a5cf304becba8cb09ed814e9dc
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689088257698
+    created: 1689088257698
+    url: http://localhost:8000/api/login/
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "allen",
+        	"password": "password"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685164293588.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dde9abcd9b50483eaacb1dc17a7b9e16
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689094739229
+    created: 1689084688403
+    url: http://localhost:8000/api/assignments/
+    name: add assignment
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title" : "something else ",
+        	"detail":"add books to the table that eats rice",
+        	"due_date" : "2006-05-10"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684862805077.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bbd99e8de7094775bba7d21e13009833
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689084992297
+    created: 1689084972277
+    url: http://localhost:8000/api/assignments/
+    name: list of assignments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684862805027.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_37635f120d8f44bdabfdc66db30c5fbd
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689094945949
+    created: 1689091864600
+    url: http://localhost:8000/api/assignments/submissions/check/?assignment_id=1&user_id=2
+    name: check
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684712060784.2812
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5517e0c80cb54c6ea6eab6a446191b1a
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689085291071
+    created: 1689085048129
+    url: http://localhost:8000/api/assignments/submissions
+    name: submit assignments
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"assignment_id" : "1",
+        	"user_id" : 1,
+        	"file" : "somthing"
+        	
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684561316541.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0dd74e6f12034820a0d103887a5aa89c
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689095121326
+    created: 1689095066337
+    url: http://localhost:8000/api/assignments/submited/?user_id=1
+    name: submitted assignment
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684410572298.0938
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c8e5344777c842edb18d5a70e8cc0de4
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689097133290
+    created: 1689096189586
+    url: http://localhost:8000/api/submissions/4/1
+    name: remove assignments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684335200176.5469
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0f0cb7a8a46e3268beeb633658b0cdfe652e8432
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689083640293
+    created: 1689083640293
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1689083640293
+    _type: environment
+  - _id: jar_0f0cb7a8a46e3268beeb633658b0cdfe652e8432
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689083640293
+    created: 1689083640293
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_0ea7e9cb02814bedae3a23b1347971d6
+    parentId: wrk_a2fd55d43dc64ffc9869d26c088c9397
+    modified: 1689083640290
+    created: 1689083640290
+    fileName: CMS
+    contents: ""
+    contentType: yaml
+    _type: api_spec
